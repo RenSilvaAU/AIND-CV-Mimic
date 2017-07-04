@@ -134,6 +134,9 @@ detector.addEventListener("onImageResultsSuccess", function(faces, image, timest
 
     // TODO: Call your function to run the game (define it first!)
     // <your code here>
+
+    setTargetEmoji(emojis[3]);
+
   }
 });
 
@@ -219,3 +222,26 @@ function drawEmoji(canvas, img, face) {
 // - Define a game reset function (same as init?), and call it from the onReset() function above
 
 // <your code here>
+
+gameScore = 0;
+
+scoreBoardDrawn = false;
+
+function drawScoreBoard(canvas) {
+
+    var ctx = canvas.getContext('2d');
+  
+    ctx.strokeStyle = 'white';
+    ctx.fillStyle = 'white';
+
+    ctx.rect(20,20,200,200);
+    ctx.fill();
+
+    scoreBoardDrawn = true;
+  
+}
+
+function gameUpdateScore(canvas, img, score) {
+
+
+}
